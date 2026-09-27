@@ -1,0 +1,32 @@
+# Local .terraform directories
+**/.terraform/
+
+# .tfstate files (Contains plain text secrets and infrastructure state)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files as they often contain sensitive data/credentials
+# *.tfvars
+# *.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override files for CLI configurations if necessary, but exclude CLI configs
+.terraformrc
+terraform.rc
+
+# CLI plan files (may contain sensitive sensitive parameters)
+*.tfplan
+
+# Local CLI configuration
+.terraform.lock.hcl
+# Note: Modern Terraform workflows debate committing .terraform.lock.hcl. 
+# If you want to lock provider versions across your team, comment out the line above.
