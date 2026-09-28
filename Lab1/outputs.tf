@@ -32,14 +32,10 @@ output "sku_kind" {
   value = var.sku_settings.kind
 }
 
-output "alpha" {
-  value = module.alpha.random_string
+output "regionA" {
+  value = module.regionA.random_string
 }
 
-output "bravo" {
-  value = module.bravo.random_string
-}
-
-output "charlie" {
-  value = module.charlie.random_string
+output "regionB" {
+  value = module.regionB.random_string
 }

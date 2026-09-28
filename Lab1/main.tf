@@ -8,44 +8,20 @@ locals {
   environment_prefix = "${var.application_name}-${var.environment_name}-${random_string.suffix.result}"
 }
 
-resource "random_string" "list" {
+module "regionA" {
+  source = "./modules/regional-stamp"
 
-  count = length(var.regions)
-
-  length  = 6
-  upper   = false
-  special = false
+  region         = "centralindia"
+  name           = "bar"
+  min_node_count = 4
+  max_node_count = 8
 }
 
-resource "random_string" "map" {
+module "regionB" {
+  source = "./modules/regional-stamp"
 
-  for_each = var.region_instance_count
-
-  length  = 6
-  upper   = false
-  special = false
-}
-
-resource "random_string" "if" {
-
-  count = var.enabled ? 1 : 0
-
-  length  = 6
-  upper   = false
-  special = false
-}
-
-module "alpha" {
-  source  = "hashicorp/module/random"
-  version = "1.0.0"
-}
-
-module "bravo" {
-  source  = "hashicorp/module/random"
-  version = "1.0.0"
-}
-
-module "charlie" {
-  source = "./modules/rando"
-  length = 8
+  region         = "westindia"
+  name           = "foo"
+  min_node_count = 4
+  max_node_count = 8
 }
