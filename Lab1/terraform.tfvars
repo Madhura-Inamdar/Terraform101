@@ -1,1 +1,1 @@
-application_name = "blog"
+application_name = "blog123456"
