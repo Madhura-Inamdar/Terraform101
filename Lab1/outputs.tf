@@ -33,9 +33,11 @@ output "sku_kind" {
 }
 
 output "regionA" {
-  value = module.regionA.random_string
+  # value = module.regional_stamps[0].name
+  value = module.regional_stamps["bar"].region
 }
 
 output "regionB" {
-  value = module.regionB.random_string
+  # value = module.regional_stamps[1].name
+  value = module.regional_stamps["foo"].region
 }
