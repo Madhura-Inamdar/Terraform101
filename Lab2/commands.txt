@@ -1,0 +1,3 @@
+Set the Azure Subscription ID:
+$env:ARM_SUBSCRIPTION_ID = "f82c02a4-133c-4cca-8bb6-63a737a19432"
+
